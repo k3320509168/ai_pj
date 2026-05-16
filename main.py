@@ -134,7 +134,8 @@ async def callback(request: Request):
 # 🚨 🤖 5. 處理長輩傳來「照片」的超級雷達 (自動生成專屬長輩圖)
 @handler.add(MessageEvent, message=ImageMessage)
 def handle_image(event):
-    MY_NGROK_URL = "https://senior-platform-concise.ngrok-free.dev"
+    # 💡 讓程式在雲端時自動用雲端網址，在本地時用 ngrok
+    MY_NGROK_URL = os.environ.get("RENDER_EXTERNAL_URL", "https://senior-platform-concise.ngrok-free.dev")
     
     # A. 抓取長輩傳來的圖片資料並儲存
     message_content = line_bot_api.get_message_content(event.message.id)
@@ -197,7 +198,8 @@ def handle_image(event):
 def handle_message(event):
     global current_word_index
     user_text = event.message.text
-    MY_NGROK_URL = "https://senior-platform-concise.ngrok-free.dev" 
+   # 💡 讓程式在雲端時自動用雲端網址，在本地時用 ngrok
+    MY_NGROK_URL = os.environ.get("RENDER_EXTERNAL_URL", "https://senior-platform-concise.ngrok-free.dev") 
     
     # ─── 【語音分支 A】點擊「聽台語」 ───
     if user_text == "聽台語":
