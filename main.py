@@ -54,8 +54,8 @@ GREETING_IMAGES = {
         "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=800"
     ],
     "晚安": [
-        "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=800",
-        "https://images.unsplash.com/photo-1532767153582-b1a0e414d5b9?w=800"
+        "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80",  # 星空雪山 (全新超穩網址)
+        "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?auto=format&fit=crop&w=800&q=80"   # 璀璨星空
     ]
 }
 
