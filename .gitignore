@@ -1,5 +1,9 @@
+# 絕對不准上傳的過濾名單
 .env
 venv/
 __pycache__/
-*.exe
-.vscode/
+*.pyc
+.pytest_cache/
+static/user_raw.jpg
+static/user_generated.jpg
+static/preset_generated.jpg

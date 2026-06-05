@@ -1,0 +1,5 @@
+Flask==3.0.0
+line-bot-sdk==3.7.0
+requests
+APScheduler
+gunicorn
